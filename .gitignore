@@ -1,0 +1,8 @@
+.bsp
+.idea
+target/
+<<<<<<< Updated upstream
+file500.pdf
+=======
+pdfsample/file500.pdf
+>>>>>>> Stashed changes

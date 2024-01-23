@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+# ~~~~
+OPTIONS        /            controllers.RootController.rootOptions
+OPTIONS        /*url        controllers.RootController.options(url: String)
+
+# Public Resources
+GET            /api/healthcheck     controllers.RootController.buildInfo
+
+POST           /pdf/sign                controllers.SignController.sign
+POST           /pdf/sign/toa3           controllers.SignToA3Controller.sign
+POST           /pdf/sign/appearances    controllers.SignAppearanceController.sign
+
+POST           /pdf/kek/sign             controllers.KeKSignController.sign
+POST           /pdf/kek/sign/appearances controllers.KekSignAppearanceController.sign
+
+POST           /pdf/verify          controllers.VerifyController.verify
+GET            /pdf/verify/html     controllers.VerifyFileController.verifyHTML
+POST           /pdf/verify/file     controllers.VerifyFileController.verifyFile
+
+POST           /cert/save           controllers.CertController.save
+POST           /cert/get            controllers.CertController.get
+POST           /cert/extract        controllers.CertController.extract

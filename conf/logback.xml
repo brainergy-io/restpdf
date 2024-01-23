@@ -1,0 +1,16 @@
+<configuration>
+    <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>[%date{yyyy-MM-dd HH:mm:ss Z,Asia/Bangkok}] %logger{0} %message%n%xException</pattern>
+        </layout>
+    </appender>
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <logger name="controllers" level="DEBUG"/>
+    <logger name="io.brainergy" level="DEBUG"/>
+    <logger name="com.itextpdf.kernel.pdf.PdfReader" level="OFF"/>
+
+</configuration>
